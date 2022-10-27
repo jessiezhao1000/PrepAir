@@ -8,11 +8,8 @@
 import SwiftUI
 
 struct RootView: View {
-    @State var press = false
-    @State var back = false
-    @State var show = false
     var body: some View {
-        NavigationView{
+        
             VStack {
                 Spacer()
                 ZStack {
@@ -20,15 +17,11 @@ struct RootView: View {
                     HStack(alignment: .bottom, spacing: 75) {
                         Image("flight takeoff")
                         Image("Map")
-                        
                         Image("Vector-1")
                     }.offset(y : -7)
                 }
             }.ignoresSafeArea()
-        }
-            if show{
-                MapView()
-            }
+        
         
     }
 }
