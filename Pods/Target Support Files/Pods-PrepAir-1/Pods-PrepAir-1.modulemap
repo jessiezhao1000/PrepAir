@@ -1,0 +1,6 @@
+framework module Pods_PrepAir_1 {
+  umbrella header "Pods-PrepAir-1-umbrella.h"
+
+  export *
+  module * { export * }
+}
