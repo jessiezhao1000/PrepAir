@@ -8,16 +8,35 @@ import MapKit
 import SwiftUI
 
 struct MapView: View {
+    @State var showHome = false
     @StateObject private var viewModel = MapViewModel()
     
     @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 33.748997, longitude: -84.387985), span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
     var body: some View {
-        Map(coordinateRegion: $region, showsUserLocation: true)
-            .ignoresSafeArea()
-            .accentColor(Color(.systemPink))
-            .onAppear{
-                viewModel.checkLocationAuthorization()
-            }
+        ZStack {
+            
+               
+                
+                Map(coordinateRegion: $region, showsUserLocation: true)
+                    .ignoresSafeArea()
+                    .accentColor(Color(.systemPink))
+                    .onAppear{
+                        viewModel.checkLocationAuthorization()
+                }
+//            VStack {
+//                Image("Back")
+//                    .padding([.leading, .top])
+//                    .frame(maxWidth: .infinity,alignment: .leading)
+//                    .onTapGesture{
+//                        showHome.toggle()
+//                }
+//                Spacer()
+//            }
+                
+        }.overlay(RootView())
+//        if showHome{
+//            HomeView()
+//        }
     }
 }
 
