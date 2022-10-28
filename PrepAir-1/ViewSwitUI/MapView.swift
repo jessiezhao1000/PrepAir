@@ -45,11 +45,11 @@ struct MapView_Previews: PreviewProvider {
 
 final class MapViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
     
-    @Published var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 33.748997, longitude: -84.387985), span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
+    @Published var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 33.640411, longitude: -84.419853), span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
     
     var locationManager: CLLocationManager?
     
-   private func checkLocationServiceEnable() {
+private func checkLocationServiceEnable() {
         if CLLocationManager.locationServicesEnabled() {
             locationManager = CLLocationManager()
             locationManager?.desiredAccuracy = kCLLocationAccuracyBest
@@ -61,7 +61,7 @@ final class MapViewModel: NSObject, ObservableObject, CLLocationManagerDelegate 
         }
     }
     
-    func checkLocationAuthorization() {
+func checkLocationAuthorization() {
         guard let locationManager = locationManager else {return}
         
         switch locationManager.authorizationStatus {
@@ -79,7 +79,7 @@ final class MapViewModel: NSObject, ObservableObject, CLLocationManagerDelegate 
         }
     }
     
-    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
         checkLocationAuthorization()
     }
 }
