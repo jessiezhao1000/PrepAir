@@ -13,6 +13,7 @@ struct HomeView: View {
     
     var body: some View {
         ZStack {
+            Color.white.ignoresSafeArea()
             ScrollView(.vertical, showsIndicators: false) {
                 VStack(spacing: 0) {
                     Image("Head")

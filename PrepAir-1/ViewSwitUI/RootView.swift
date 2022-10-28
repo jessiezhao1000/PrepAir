@@ -9,12 +9,10 @@ import SwiftUI
 
 
 struct RootView: View {
-    @State var showMap = false
-    @State var showHome = false
+    @State private var showMap = false
+    @State private var showHome = false
     var body: some View {
-        
             VStack {
-                
                 Spacer()
                 ZStack {
                     Image("tab bar")
@@ -28,17 +26,15 @@ struct RootView: View {
                         Image("Vector-1")
                     }.offset(y : -7)
                 }
+          
             }.ignoresSafeArea()
+        
         if showMap{
             MapView()
         }
         if showHome{
             HomeView()
         }
-        
-        
-        
-        
     }
 }
 
