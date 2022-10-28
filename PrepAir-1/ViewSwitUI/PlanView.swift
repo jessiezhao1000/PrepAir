@@ -40,9 +40,9 @@ struct PlanView: View {
                     .frame(width: 345, height: 316)
                     .shadow(color: Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.25)), radius:10, x:0, y:4)
                
-                
                 Image("Texts")
                     .offset(y : 35)
+                
         
             } .offset(x: slide ? -150 : 0)
                 .animation(.spring(response: 0.6, dampingFraction: 0.6, blendDuration: 0), value: slide)
