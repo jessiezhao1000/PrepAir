@@ -11,13 +11,10 @@ struct MapView: View {
     @State var showHome = false
     @StateObject private var viewModel = MapViewModel()
     
-    @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 33.748997, longitude: -84.387985), span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
+    
     var body: some View {
         ZStack {
-            
-               
-                
-                Map(coordinateRegion: $region, showsUserLocation: true)
+            Map(coordinateRegion: $viewModel.region, showsUserLocation: true)
                     .ignoresSafeArea()
                     .accentColor(Color(.systemPink))
                     .onAppear{
@@ -48,6 +45,8 @@ struct MapView_Previews: PreviewProvider {
 
 final class MapViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
     
+    @Published var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 33.748997, longitude: -84.387985), span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
+    
     var locationManager: CLLocationManager?
     
    private func checkLocationServiceEnable() {
@@ -74,7 +73,7 @@ final class MapViewModel: NSObject, ObservableObject, CLLocationManagerDelegate 
         case .denied:
             print("You have denied location permission, go to settings to change it")
         case .authorizedAlways, .authorizedWhenInUse:
-            break
+            region = MKCoordinateRegion(center: locationManager.location!.coordinate, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
         @unknown default:
             break
         }
