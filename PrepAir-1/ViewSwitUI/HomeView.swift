@@ -16,7 +16,9 @@ struct HomeView: View {
             Color.white.ignoresSafeArea()
             ScrollView(.vertical, showsIndicators: false) {
                 VStack(spacing: 0) {
-                    Image("Head")
+                    //Image("Head")
+                    
+                    HeaderView()
                         
                     Text("Your Plans")
                         .font(.title)
