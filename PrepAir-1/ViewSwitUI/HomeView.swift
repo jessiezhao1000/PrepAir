@@ -58,7 +58,7 @@ struct HomeView: View {
                     Spacer()
                 }
             } .ignoresSafeArea(.all)
-                .overlay(RootView())
+                .overlay(RootHomeView())
             if show {
                 //withAnimation(.spring(response: 0.6, dampingFraction: 0.8)) {
                     PlanEditView(namespace: namespace, show: $show)

@@ -9,6 +9,8 @@ import SwiftUI
 
 struct HeaderView: View {
     @State var text = ""
+    @State var isBegin = false
+    
     var body: some View {
         ZStack {
             Rectangle()
@@ -43,6 +45,11 @@ struct HeaderView: View {
                     TextField("Select your flight", text: $text)
                         .textFieldStyle(OvalTextFieldStyle())
                         .padding(.leading)
+                        .onTapGesture {
+                            print("work?") // how to detect if a user has tap onto the text field?
+                        }
+                        
+                        
                     Spacer()
                     //Rectangle 4
                     RoundedRectangle(cornerRadius: 25)

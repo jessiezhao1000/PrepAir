@@ -30,7 +30,7 @@ struct MapView: View {
 //                Spacer()
 //            }
                 
-        }.overlay(RootView())
+        }.overlay(RootMapView())
 //        if showHome{
 //            HomeView()
 //        }
