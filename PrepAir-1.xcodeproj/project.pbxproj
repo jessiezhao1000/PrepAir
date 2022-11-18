@@ -11,6 +11,11 @@
 		6E5BF150291A0AAA004F53B2 /* RootMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5BF14F291A0AAA004F53B2 /* RootMapView.swift */; };
 		985D2690CE07505B3742DB46 /* Pods_PrepAir_1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ADE6A28AD015AFD08945668 /* Pods_PrepAir_1.framework */; };
 		FF09C60F290A038F00ACDD7B /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF09C60E290A038F00ACDD7B /* MapView.swift */; };
+		FF10C5962926D99400FA100A /* ParkingMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF10C5952926D99400FA100A /* ParkingMainView.swift */; };
+		FF10C5982926DC2B00FA100A /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF10C5972926DC2B00FA100A /* ProfileView.swift */; };
+		FF10C59C2926E25F00FA100A /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF10C59B2926E25F00FA100A /* ProfileHeaderView.swift */; };
+		FF10C59E2926E76700FA100A /* ParkingHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF10C59D2926E76700FA100A /* ParkingHeader.swift */; };
+		FF10C5A02926F9A400FA100A /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF10C59F2926F9A400FA100A /* ImagePicker.swift */; };
 		FF25567F28ECDDF2009975A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF25567E28ECDDF2009975A9 /* AppDelegate.swift */; };
 		FF25568128ECDDF2009975A9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF25568028ECDDF2009975A9 /* SceneDelegate.swift */; };
 		FF25568328ECDDF2009975A9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF25568228ECDDF2009975A9 /* ViewController.swift */; };
@@ -67,6 +72,11 @@
 		6E5BF14F291A0AAA004F53B2 /* RootMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootMapView.swift; sourceTree = "<group>"; };
 		A6166FB12A4EBEBBD0FF20F2 /* Pods-PrepAir-1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrepAir-1.debug.xcconfig"; path = "Target Support Files/Pods-PrepAir-1/Pods-PrepAir-1.debug.xcconfig"; sourceTree = "<group>"; };
 		FF09C60E290A038F00ACDD7B /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		FF10C5952926D99400FA100A /* ParkingMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingMainView.swift; sourceTree = "<group>"; };
+		FF10C5972926DC2B00FA100A /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		FF10C59B2926E25F00FA100A /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
+		FF10C59D2926E76700FA100A /* ParkingHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingHeader.swift; sourceTree = "<group>"; };
+		FF10C59F2926F9A400FA100A /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		FF25567B28ECDDF2009975A9 /* PrepAir-1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PrepAir-1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF25567E28ECDDF2009975A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF25568028ECDDF2009975A9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -214,6 +224,11 @@
 				6E5BF14D2919FE76004F53B2 /* HeaderView.swift */,
 				FFAA5A8D290745C400726513 /* RootHomeView.swift */,
 				6E5BF14F291A0AAA004F53B2 /* RootMapView.swift */,
+				FF10C5952926D99400FA100A /* ParkingMainView.swift */,
+				FF10C5972926DC2B00FA100A /* ProfileView.swift */,
+				FF10C59F2926F9A400FA100A /* ImagePicker.swift */,
+				FF10C59B2926E25F00FA100A /* ProfileHeaderView.swift */,
+				FF10C59D2926E76700FA100A /* ParkingHeader.swift */,
 			);
 			path = ViewSwitUI;
 			sourceTree = "<group>";
@@ -376,6 +391,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF10C5962926D99400FA100A /* ParkingMainView.swift in Sources */,
 				FFAA5A8C290745A300726513 /* HomeView.swift in Sources */,
 				6E5BF150291A0AAA004F53B2 /* RootMapView.swift in Sources */,
 				6E5BF14E2919FE76004F53B2 /* HeaderView.swift in Sources */,
@@ -388,13 +404,17 @@
 				FF25569F28EE4717009975A9 /* LoginViewController.swift in Sources */,
 				FFAA5A9A2907468C00726513 /* FlightPlanItem2.swift in Sources */,
 				FF09C60F290A038F00ACDD7B /* MapView.swift in Sources */,
+				FF10C59C2926E25F00FA100A /* ProfileHeaderView.swift in Sources */,
 				FF88B0DB28EE6D11000133BD /* Constants.swift in Sources */,
 				FF2556A128EE4723009975A9 /* HomeViewController.swift in Sources */,
 				FFAA5A9C2907468C00726513 /* FlightPlanItem3.swift in Sources */,
 				FF25568128ECDDF2009975A9 /* SceneDelegate.swift in Sources */,
 				FFAA5A92290745C600726513 /* PlanEditView.swift in Sources */,
 				FFAA5A93290745C600726513 /* PlanView.swift in Sources */,
+				FF10C5982926DC2B00FA100A /* ProfileView.swift in Sources */,
+				FF10C5A02926F9A400FA100A /* ImagePicker.swift in Sources */,
 				FFAA5A9B2907468C00726513 /* FlightPlanItem.swift in Sources */,
+				FF10C59E2926E76700FA100A /* ParkingHeader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
