@@ -19,10 +19,10 @@ struct ProfileHeaderView: View {
             VStack {
                 Image("Vector-1").resizable().scaledToFit()
                     .padding([.leading, .top])
-                    .frame(width: 150,height: 150, alignment: .center)
+                    .frame(width: 100,height: 100, alignment: .center)
                    
                 
-                HStack {
+                
                     /*
                     RoundedRectangle(cornerRadius: 25)
                         .fill(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
@@ -38,10 +38,10 @@ struct ProfileHeaderView: View {
                         
                         
                     //Rectangle 4
-                }
+                
                     
             }
-            
+          
             
         }
     }

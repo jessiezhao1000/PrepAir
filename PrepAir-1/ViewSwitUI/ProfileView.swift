@@ -13,9 +13,23 @@ struct ProfileView: View {
             Color.white.ignoresSafeArea()
                 VStack(spacing: 0){
                     ProfileHeaderView()
-                
+                    HStack {
+                        Image("Parking")
+                            .padding(10)
+                            .padding([.leading, .top])
+                        Spacer()
+                       
+
+                    }
+                    Text("Parking")
+                        .font(.body)
+                        .fontWeight(.regular)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding([.leading, .top])
+                    Spacer()
             }
-        }
+            
+        }.ignoresSafeArea(.all)
     }
     
     struct ProfileView_Previews: PreviewProvider {

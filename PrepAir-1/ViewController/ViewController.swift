@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import SwiftUI
 
 
 class ViewController: UIViewController {
@@ -14,7 +14,11 @@ class ViewController: UIViewController {
   
     @IBOutlet weak var signUpBtn: UIButton!
     @IBOutlet weak var signInBtn: UIButton!
+    
+    @IBOutlet weak var typeName: UITextField!
+    
     var radius = 22
+    public var completionHandler: ((String?) -> Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +26,13 @@ class ViewController: UIViewController {
         signInBtn.layer.cornerRadius = CGFloat(radius);
     }
     
+    @IBAction func didTapEnter(){
+        let vc = storyboard?.instantiateViewController(withIdentifier: Constants.StoryBoard.homeViewController) as? HomeViewController
+        view.window?.rootViewController = vc
+        view.window?.makeKeyAndVisible()
+        completionHandler?(typeName.text)
+        
+    }
 
 
 }
