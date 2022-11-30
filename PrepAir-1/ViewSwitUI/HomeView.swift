@@ -20,9 +20,9 @@ struct HomeView: View {
                     
                     HeaderView()
                         
-                    Text("Yiqian")
+                    Text("Plans")
                         .font(.title)
-
+                        .fontWeight(.bold)
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding([.leading, .top])
                     
