@@ -20,9 +20,8 @@ struct HomeView: View {
                     
                     HeaderView()
                         
-                    Text("Plans")
+                    Text("Your Plans")
                         .font(.title)
-                        .fontWeight(.bold)
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding([.leading, .top])
                     
@@ -42,6 +41,8 @@ struct HomeView: View {
                                 .padding()
                             FlightPlanItem3()
                                 .padding()
+                               
+                            
                         }
                     }
                     
