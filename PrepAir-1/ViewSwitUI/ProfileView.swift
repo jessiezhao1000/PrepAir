@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ProfileView: View {
+    @State private var showParking = false
+
     var body: some View {
         ZStack{
             Color.white.ignoresSafeArea()
@@ -17,6 +19,9 @@ struct ProfileView: View {
                         Image("Parking")
                             .padding(10)
                             .padding([.leading, .top])
+                            .onTapGesture{
+                                showParking.toggle()
+                            }
                         Spacer()
                        
 
@@ -30,6 +35,16 @@ struct ProfileView: View {
             }
             
         }.ignoresSafeArea(.all)
+            .overlay(RootHomeView())
+
+        
+        if showParking{
+            if #available(iOS 16.0, *) {
+                ParkingMainView()
+            } else {
+                // Fallback on earlier versions
+            }
+        }
     }
     
     struct ProfileView_Previews: PreviewProvider {
@@ -37,4 +52,5 @@ struct ProfileView: View {
             ProfileView()
         }
     }
+    
 }
