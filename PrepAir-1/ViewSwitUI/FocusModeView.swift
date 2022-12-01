@@ -13,58 +13,76 @@ struct FocusModeView: View {
     @Environment(\.scenePhase) var scenePhase
     @State private var isActive = true
     
+    @State private var contentOffset = CGFloat(0)
+    @State var homeViewShow = false
+    
     var body: some View {
         ZStack {
             //Rectangle 1
             Rectangle()
                 .fill(Color(#colorLiteral(red: 0.3137255012989044, green: 0.3921568691730499, blue: 0.6980392336845398, alpha: 1)))
-                .frame(width: 393, height: 852)
-                
-            VStack {
-                //DL 314
-                Text("DL 314")
-                    .font(.system(size:20))
-                    .fontWeight(.bold)
-                    .foregroundColor(.white)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding([.leading])
-                    .padding(.top, 130)
-                
-                HStack {
-                    //Countdown
-                    Text("\(timeRemaining / 60) ")
-                        .font(.system(size:128))
-                        .foregroundColor(.white) +
-                    Text("min")
-                        .font(.system(size:36))
+                .frame(width: 393, height: 1000)
+            //Color.blue.ignoresSafeArea(.all)
+            
+            TrackableScrollView(offsetChanged: { offset in
+                contentOffset = offset.y
+                print("contentOffset", contentOffset)
+                if contentOffset < -100 {
+                    withAnimation {
+                        homeViewShow = true
+                    }
+                }
+            }) {
+                VStack {
+                    //DL 314
+                    Text("DL 314")
+                        .font(.system(size:20))
                         .fontWeight(.bold)
                         .foregroundColor(.white)
-                    Spacer()
-                }.padding(.leading)
-                
-                HStack {
-                    Text("\(timeRemaining % 60) ")
-                        .font(.system(size:128))
-                        .foregroundColor(.white) +
-                    Text("sec")
-                        .font(.system(size:36))
-                        .fontWeight(.bold)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding([.leading])
+                        .padding(.top, 230)
+                    
+                    HStack {
+                        //Countdown
+                        Text("\(timeRemaining / 60) ")
+                            .font(.system(size:128))
+                            .foregroundColor(.white) +
+                        Text("min")
+                            .font(.system(size:36))
+                            .fontWeight(.bold)
+                            .foregroundColor(.white)
+                        Spacer()
+                    }.padding(.leading)
+                    
+                    HStack {
+                        Text("\(timeRemaining % 60) ")
+                            .font(.system(size:128))
+                            .foregroundColor(.white) +
+                        Text("sec")
+                            .font(.system(size:36))
+                            .fontWeight(.bold)
+                            .foregroundColor(.white)
+                        Spacer()
+                    }.padding(.leading)
+                    
+                    //left for domestic security
+                    Text("left for domestic security")
+                        .font(.system(size : 20))
                         .foregroundColor(.white)
-                    Spacer()
-                }.padding(.leading)
-                
-                //left for domestic security
-                Text("left for domestic security")
-                    .font(.system(size : 20))
-                    .foregroundColor(.white)
-                    .fontWeight(.bold)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding([.leading])
-                Spacer()
-                Image("Group 8")
-                    .padding(.bottom, 80)
-                    //.offset(y : 100)
-                
+                        .fontWeight(.bold)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding([.leading])
+                    //Spacer()
+                    Image("Group 8")
+                        //.padding(.bottom, 150)
+                        .offset(y : 100)
+                    
+                }
+            }
+            if homeViewShow {
+                HomeView()
+                    //.offset(y:75)
             }
         }.ignoresSafeArea()
         .onReceive(timer) {
@@ -80,6 +98,7 @@ struct FocusModeView: View {
                 isActive = false
             }
         }
+        
     }
 }
 

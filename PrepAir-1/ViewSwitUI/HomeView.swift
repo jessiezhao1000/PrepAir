@@ -11,17 +11,34 @@ struct HomeView: View {
     @Namespace var namespace
     @State var show = false
     
+    @State private var contentOffset = CGFloat(0)
+    @State var focusModeShow = false
+    
     var body: some View {
         ZStack {
-            Color.white.ignoresSafeArea()
-            ScrollView(.vertical, showsIndicators: false) {
+            Color.white.ignoresSafeArea(.all)
+            TrackableScrollView(offsetChanged: { offsetHome in
+                contentOffset = offsetHome.y
+                print("contentOffset", contentOffset)
+                if contentOffset > 100 {
+                    withAnimation {
+                        focusModeShow = true
+                        //homeViewShow = false
+                    }
+                    
+                }
+            }) {
                 VStack(spacing: 0) {
                     //Image("Head")
-                    
+                    //FocusModeView()
+
                     HeaderView()
+                        .offset(y:-75)
+                        .frame(height:260)
                         
                     Text("Your Plans")
                         .font(.title)
+                        .fontWeight(.bold)
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding([.leading, .top])
                     
@@ -58,8 +75,10 @@ struct HomeView: View {
                     
                     Spacer()
                 }
-            } .ignoresSafeArea(.all)
-                .overlay(RootHomeView())
+               
+            }
+            .ignoresSafeArea(.all)
+            .overlay(RootHomeView())
             if show {
                 //withAnimation(.spring(response: 0.6, dampingFraction: 0.8)) {
                     PlanEditView(namespace: namespace, show: $show)
@@ -67,7 +86,10 @@ struct HomeView: View {
                 //}
                 
             }
-        }
+            if focusModeShow {
+                FocusModeView()
+            }
+        }.frame(width: 400, height: 800)
         
     }
 }
