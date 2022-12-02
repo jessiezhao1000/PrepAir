@@ -16,6 +16,7 @@ struct FocusModeView: View {
     @State private var contentOffset = CGFloat(0)
     @State var homeViewShow = false
     
+    @Binding var userName: String
     //@State var userName: String = ""
     
     var body: some View {
@@ -29,7 +30,7 @@ struct FocusModeView: View {
             TrackableScrollView(offsetChanged: { offset in
                 contentOffset = offset.y
                 print("contentOffset", contentOffset)
-                print(LoginView().$userName)
+                //print(LoginView().$userName)
                 if contentOffset < -100 {
                     withAnimation {
                         homeViewShow = true
@@ -85,7 +86,7 @@ struct FocusModeView: View {
             }
             if homeViewShow {
                 
-                HomeView(userName: LoginView().$userName)
+                HomeView(userName: $userName)
                     //.offset(y:75)
             }
         }.ignoresSafeArea()
@@ -107,7 +108,8 @@ struct FocusModeView: View {
 }
 
 struct FocusModeView_Previews: PreviewProvider {
+    @State static var userName: String = ""
     static var previews: some View {
-        FocusModeView()
+        FocusModeView(userName: $userName)
     }
 }

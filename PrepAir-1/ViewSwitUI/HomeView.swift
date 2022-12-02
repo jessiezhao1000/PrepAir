@@ -151,13 +151,13 @@ struct HomeView: View {
             if show {
                 //withAnimation(.spring(response: 0.6, dampingFraction: 0.8)) {
                     //PlanEditView(namespace: namespace, show: $show)
-                    PlanView()
+                    PlanView(userName: $userName)
                         //.ignoresSafeArea(.all)
                 //}
                 
             }
             if focusModeShow {
-                FocusModeView()
+                FocusModeView(userName: $userName)
             }
         }
         .frame(width: 400, height: 800)

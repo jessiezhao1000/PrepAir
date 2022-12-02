@@ -13,6 +13,8 @@ struct PlanView: View {
     @State var back = false
     @State var selectedTab = "Home"
     
+    @Binding var userName: String
+    
     var body: some View {
         ZStack {
             Color.white.ignoresSafeArea(.all)
@@ -119,7 +121,7 @@ struct PlanView: View {
                     }
             }
             if back {
-                HomeView(userName: .constant(""))
+                HomeView(userName: $userName)
             }
         }
        
@@ -128,7 +130,8 @@ struct PlanView: View {
 
 
 struct PlanView_Previews: PreviewProvider {
+    @State static var userName: String = ""
     static var previews: some View {
-        PlanView()
+        PlanView(userName: $userName)
     }
 }
