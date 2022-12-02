@@ -52,7 +52,7 @@ struct HomeView: View {
                                 .foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
                                 .frame(maxWidth: .infinity, alignment: .leading)
                                 .padding(.leading)
-                                .padding(.top, 200)
+                                .padding(.top, 225)
                                 
                             
                             Text("Yiqian")
