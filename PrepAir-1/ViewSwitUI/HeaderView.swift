@@ -12,6 +12,8 @@ struct HeaderView: View {
     @State var isBegin = false
     @State private var calander = Date()
     @State var showDatePicker = false
+    
+    @Binding var userName: String
 
     
     var body: some View {
@@ -31,7 +33,8 @@ struct HeaderView: View {
                     .padding(.leading)
                     .padding(.top, 200)
                 
-                Text("Yiqian")
+                //Text("\(self.$userName)")
+                Text(self.userName)
                     .font(.system(size: 40))
                     .fontWeight(.regular)
                     .foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
@@ -76,7 +79,7 @@ struct HeaderView: View {
         }
     }
     
-    struct OvalTextFieldStyle: TextFieldStyle {
+struct OvalTextFieldStyle: TextFieldStyle {
         func _body(configuration: TextField<Self._Label>) -> some View {
             configuration
                 .padding(10)
@@ -87,10 +90,11 @@ struct HeaderView: View {
             //.shadow(color: .gray, radius: 10)
         }
     }
-    
-    struct HeaderView_Previews: PreviewProvider {
-        static var previews: some View {
-            HeaderView()
-        }
+}
+
+struct HeaderView_Previews: PreviewProvider {
+    @State static var userName: String = ""
+    static var previews: some View {
+        HeaderView(userName: $userName)
     }
 }
