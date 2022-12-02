@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CodeScanner
 
 struct HomeView: View {
     @Namespace var namespace
@@ -20,6 +21,21 @@ struct HomeView: View {
     @State var showDatePicker = false
     
     @Binding var userName: String
+    
+    @State var isPresentingScanner = false
+    @State var scannedCode: String  = "Scan your QR code"
+    var scannerSheet : some View {
+        CodeScannerView(
+            codeTypes: [.qr],
+            completion: {
+                result in
+                if case let .success(code) = result {
+                    self.scannedCode = code.string
+                    self.isPresentingScanner = false
+                }
+            }
+        )
+    }
     
     
     var body: some View {
@@ -88,10 +104,23 @@ struct HomeView: View {
                                 
                                 Spacer()
                                 //Rectangle 4
-                                RoundedRectangle(cornerRadius: 25)
-                                    .fill(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
-                                    .frame(width: 79, height: 40)
-                                    .padding(.trailing)
+//                                RoundedRectangle(cornerRadius: 25)
+//                                    .fill(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
+//                                    .frame(width: 79, height: 40)
+//                                    .padding(.trailing)
+                                Button("Scan"){
+                                    self.isPresentingScanner = true
+                                    
+                                }.sheet(isPresented: $isPresentingScanner){
+                                    self.scannerSheet}
+                                    
+                                label: do {
+                                    Image(systemName: "camera.fill")
+                                        .foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
+                                        .font(.title)
+                                        .frame(width: 79, height: 40)
+                                        .padding(.trailing)
+                                    }
                                 
                                 }
                             }
