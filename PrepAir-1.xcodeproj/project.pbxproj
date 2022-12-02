@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E3931BE2939518100EBAB7E /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3931BD2939518100EBAB7E /* LoginView.swift */; };
+		6E3931C02939685400EBAB7E /* NameGetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3931BF2939685400EBAB7E /* NameGetter.swift */; };
 		6E5BF14E2919FE76004F53B2 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5BF14D2919FE76004F53B2 /* HeaderView.swift */; };
 		6E5BF150291A0AAA004F53B2 /* RootMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5BF14F291A0AAA004F53B2 /* RootMapView.swift */; };
 		6E9F70B829381A780027F4E5 /* FocusModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9F70B729381A780027F4E5 /* FocusModeView.swift */; };
@@ -74,6 +76,8 @@
 /* Begin PBXFileReference section */
 		53615082FFBFCE323C9C11AF /* Pods-PrepAir-1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrepAir-1.release.xcconfig"; path = "Target Support Files/Pods-PrepAir-1/Pods-PrepAir-1.release.xcconfig"; sourceTree = "<group>"; };
 		5ADE6A28AD015AFD08945668 /* Pods_PrepAir_1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrepAir_1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E3931BD2939518100EBAB7E /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		6E3931BF2939685400EBAB7E /* NameGetter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameGetter.swift; sourceTree = "<group>"; };
 		6E5BF14D2919FE76004F53B2 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		6E5BF14F291A0AAA004F53B2 /* RootMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootMapView.swift; sourceTree = "<group>"; };
 		6E9F70B729381A780027F4E5 /* FocusModeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FocusModeView.swift; sourceTree = "<group>"; };
@@ -247,6 +251,8 @@
 				FF10C59B2926E25F00FA100A /* ProfileHeaderView.swift */,
 				FF10C59D2926E76700FA100A /* ParkingHeader.swift */,
 				6E9F70B9293846A40027F4E5 /* TrackableScrollView.swift */,
+				6E3931BD2939518100EBAB7E /* LoginView.swift */,
+				6E3931BF2939685400EBAB7E /* NameGetter.swift */,
 			);
 			path = ViewSwitUI;
 			sourceTree = "<group>";
@@ -430,8 +436,10 @@
 				FF2556A128EE4723009975A9 /* HomeViewController.swift in Sources */,
 				FFAA5A9C2907468C00726513 /* FlightPlanItem3.swift in Sources */,
 				FF25568128ECDDF2009975A9 /* SceneDelegate.swift in Sources */,
+				6E3931C02939685400EBAB7E /* NameGetter.swift in Sources */,
 				FFAA5A92290745C600726513 /* PlanEditView.swift in Sources */,
 				FFAA5A93290745C600726513 /* PlanView.swift in Sources */,
+				6E3931BE2939518100EBAB7E /* LoginView.swift in Sources */,
 				FF10C5982926DC2B00FA100A /* ProfileView.swift in Sources */,
 				FF10C5A02926F9A400FA100A /* ImagePicker.swift in Sources */,
 				FFAA5A9B2907468C00726513 /* FlightPlanItem.swift in Sources */,

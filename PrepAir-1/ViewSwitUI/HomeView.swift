@@ -14,10 +14,14 @@ struct HomeView: View {
     @State private var contentOffset = CGFloat(0)
     @State var focusModeShow = false
     
+<<<<<<< Updated upstream
     @State var text = ""
     @State var isBegin = false
     @State private var calander = Date()
     @State var showDatePicker = false
+=======
+    @State var userName: String = ""
+>>>>>>> Stashed changes
     
     var body: some View {
         ZStack {
@@ -36,6 +40,7 @@ struct HomeView: View {
                 VStack(spacing: 0) {
                     //Image("Head")
                     //FocusModeView()
+<<<<<<< Updated upstream
 
                     //header
                     ZStack {
@@ -96,6 +101,12 @@ struct HomeView: View {
                         
                     if self.showDatePicker {
                         ContendCalanderView()
+=======
+                    
+                    HeaderView(userName: $userName)
+                        .offset(y:-75)
+                        .frame(height:260)
+>>>>>>> Stashed changes
                         
 
                 }
@@ -144,7 +155,8 @@ struct HomeView: View {
             .overlay(RootHomeView())
             if show {
                 //withAnimation(.spring(response: 0.6, dampingFraction: 0.8)) {
-                    PlanEditView(namespace: namespace, show: $show)
+                    //PlanEditView(namespace: namespace, show: $show)
+                    PlanView()
                         //.ignoresSafeArea(.all)
                 //}
                 
