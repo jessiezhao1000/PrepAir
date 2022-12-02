@@ -42,7 +42,7 @@ struct ProfileView: View {
             }.offset(y:-80)
             
         }.ignoresSafeArea(.all)
-            .overlay(RootHomeView())
+            .overlay(RootProfileView())
 
         
         if showParking{

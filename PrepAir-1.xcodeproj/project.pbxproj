@@ -71,6 +71,7 @@
 		FFAA5A9A2907468C00726513 /* FlightPlanItem2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAA5A972907468C00726513 /* FlightPlanItem2.swift */; };
 		FFAA5A9B2907468C00726513 /* FlightPlanItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAA5A982907468C00726513 /* FlightPlanItem.swift */; };
 		FFAA5A9C2907468C00726513 /* FlightPlanItem3.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAA5A992907468C00726513 /* FlightPlanItem3.swift */; };
+		FFD742612939A4E0005F7356 /* RootProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD742602939A4E0005F7356 /* RootProfileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -115,6 +116,7 @@
 		FFAA5A972907468C00726513 /* FlightPlanItem2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightPlanItem2.swift; sourceTree = "<group>"; };
 		FFAA5A982907468C00726513 /* FlightPlanItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightPlanItem.swift; sourceTree = "<group>"; };
 		FFAA5A992907468C00726513 /* FlightPlanItem3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightPlanItem3.swift; sourceTree = "<group>"; };
+		FFD742602939A4E0005F7356 /* RootProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -244,6 +246,7 @@
 				FF0033E32939246F0078E29C /* CalanderView.swift */,
 				FF0033E529392E470078E29C /* CustomDatePicker.swift */,
 				FFAA5A8D290745C400726513 /* RootHomeView.swift */,
+				FFD742602939A4E0005F7356 /* RootProfileView.swift */,
 				6E5BF14F291A0AAA004F53B2 /* RootMapView.swift */,
 				FF10C5952926D99400FA100A /* ParkingMainView.swift */,
 				FF10C5972926DC2B00FA100A /* ProfileView.swift */,
@@ -417,6 +420,7 @@
 			files = (
 				FF10C5962926D99400FA100A /* ParkingMainView.swift in Sources */,
 				FFAA5A8C290745A300726513 /* HomeView.swift in Sources */,
+				FFD742612939A4E0005F7356 /* RootProfileView.swift in Sources */,
 				6E5BF150291A0AAA004F53B2 /* RootMapView.swift in Sources */,
 				6E5BF14E2919FE76004F53B2 /* HeaderView.swift in Sources */,
 				FF25568328ECDDF2009975A9 /* ViewController.swift in Sources */,
