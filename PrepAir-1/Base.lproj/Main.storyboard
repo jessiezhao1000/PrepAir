@@ -63,7 +63,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qhw-cl-R0d">
-                                <rect key="frame" x="164" y="593" width="65" height="35"/>
+                                <rect key="frame" x="376" y="632" width="65" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Enter"/>
@@ -91,7 +91,7 @@
             <objects>
                 <viewController id="4NV-gH-yUa" customClass="LoginViewController" customModule="PrepAir_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ySn-Jv-uEV">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="x7g-Fj-TuD">
@@ -158,7 +158,7 @@
             <objects>
                 <viewController id="S9J-Xz-bf6" customClass="SignUpViewController" customModule="PrepAir_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="khd-dZ-7LH">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Qvf-lO-QT6">
@@ -242,13 +242,14 @@
                         <viewLayoutGuide key="safeArea" id="F3o-eB-n8n"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="WzE-PX-6at"/>
                     <connections>
                         <outlet property="theContainer" destination="cWO-4m-JsF" id="xUO-dy-k3a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="inr-nN-ZZ2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2644.9275362318845" y="77.678571428571431"/>
+            <point key="canvasLocation" x="-281" y="78"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Usd-Bj-4Bi">
@@ -260,12 +261,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="9f4-7B-jpu"/>
+                        <segue destination="k8o-qZ-pAo" kind="relationship" relationship="rootViewController" id="gbk-go-NCS"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Iv-dW-Inu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="34.782608695652179" y="97.767857142857139"/>
+            <point key="canvasLocation" x="-1343" y="78"/>
         </scene>
     </scenes>
     <resources>
