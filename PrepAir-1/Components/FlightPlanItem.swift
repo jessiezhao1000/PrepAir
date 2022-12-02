@@ -25,6 +25,7 @@ struct FlightPlanItem: View {
                 //ATL -> LAX
                 Text("ATL -> LAX")
                     .font(.title.bold())
+                    .foregroundColor(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.75)))
                     //.matchedGeometryEffect(id: "ATL LAX-font", in: namespace)
                     //.foregroundColor(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.75)))
                     .offset(y: -20)
@@ -43,16 +44,20 @@ struct FlightPlanItem: View {
                     Text("1")
                         .font(.system(size: 64))
                         .offset(y: 30)
+                        .foregroundColor(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.75)))
                         //.padding(.leading, 10)
                     Text("hr")
                         .font(.system(size: 20))
                         .offset(y: 30)
+                        .foregroundColor(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.75)))
                     Text("25")
                         .font(.system(size: 64))
                         .offset(y: 30)
+                        .foregroundColor(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.75)))
                     Text("mins")
                         .font(.system(size: 20))
                         .offset(y: 30)
+                        .foregroundColor(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.75)))
                 }
                
             }

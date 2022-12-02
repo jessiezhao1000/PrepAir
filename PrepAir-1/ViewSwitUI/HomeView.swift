@@ -109,6 +109,7 @@ struct HomeView: View {
                     Text("Your Plans")
                         .font(.title)
                         .fontWeight(.bold)
+                        .foregroundColor(.black)
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding([.leading])
                         .padding(.top, 30)
@@ -135,6 +136,7 @@ struct HomeView: View {
                     Text("Predicted Time")
                         .font(.title)
                         .fontWeight(.bold)
+                        .foregroundColor(.black)
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding([.leading, .top])
                     
@@ -170,6 +172,7 @@ struct OvalTextFieldStyle1: TextFieldStyle {
         configuration
             .padding(10)
             .background(.white)
+            .foregroundColor(Color.black)
             .cornerRadius(20)
             .frame(width: 247, height: 40)
     }

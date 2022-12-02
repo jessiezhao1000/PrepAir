@@ -95,7 +95,7 @@ struct OvalTextFieldStyle: TextFieldStyle {
 
 
 struct LoginView_Previews: PreviewProvider {
-    @State static var userName: String = ""
+    //@State static var userName: String = ""
     static var previews: some View {
         LoginView()
         //userName(userName: $userName)
