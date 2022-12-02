@@ -64,10 +64,13 @@ struct HeaderView: View {
                         .frame(width: 79, height: 40)
                         .padding(.trailing)
                     
-                    if self.showDatePicker {
-                        DatePicker("Date", selection: $calander, in: Date()..., displayedComponents: .date)
-                    }
+                                        }
                     
+                }
+                HStack{
+                    if self.showDatePicker {
+                        ContendCalanderView()
+
                 }
             }//.offset(y:125)
         }
