@@ -9,6 +9,8 @@ import SwiftUI
 
 struct CalanderView: View {
     @State var currentDate: Date = Date()
+    @State private var showHome = false
+
     var body: some View {
         ScrollView(.vertical, showsIndicators: false){
             
@@ -27,7 +29,12 @@ struct CalanderView: View {
         }
         .background(Color(#colorLiteral(red: 0.3137255012989044, green: 0.3921568691730499, blue: 0.6980392336845398, alpha: 1)))
         
+       
+              
+        
+    
     }
+    
 }
 
 struct CalanderView_Previews: PreviewProvider {
@@ -35,3 +42,4 @@ struct CalanderView_Previews: PreviewProvider {
         CalanderView()
     }
 }
+

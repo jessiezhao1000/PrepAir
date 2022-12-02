@@ -20,14 +20,16 @@ struct CustomDatePicker: View {
                 let days: [String] = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
                 HStack(spacing: 20){
                 
-                    VStack(alignment: .leading, spacing: 10){
-                        
-                        Text(extractData()[0])
-                            .font(.caption)
-                            .fontWeight(.semibold)
-                        
+                    HStack(alignment: .bottom){
                         Text(extractData()[1])
                             .font(.title.bold())
+                            .foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
+                        Text(extractData()[0])
+                            .font(.title)
+                            .fontWeight(.light)
+                            .fontWeight(.bold)
+                            .foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
+                            
                     }
                     
                     Spacer(minLength: 0)
@@ -39,6 +41,7 @@ struct CustomDatePicker: View {
                     }label: {
                         Image(systemName: "chevron.left")
                             .font(.title2)
+                            .foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
                     }
                     Button{
                         withAnimation{
@@ -47,6 +50,7 @@ struct CustomDatePicker: View {
                     }label: {
                         Image(systemName: "chevron.right")
                             .font(.title2)
+                            .foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
                     }
 
                 }
@@ -59,6 +63,7 @@ struct CustomDatePicker: View {
                             .font(.callout)
                             .fontWeight(.semibold)
                             .frame(maxWidth: .infinity)
+                            .foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
                     }
                 }
                 //dates..
@@ -87,6 +92,7 @@ struct CustomDatePicker: View {
             if value.day != -1{
                 Text("\(value.day)")
                     .font(.title3.bold())
+                    .foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
             }
         }
         .padding(.vertical,8)
