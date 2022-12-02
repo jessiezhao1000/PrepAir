@@ -47,6 +47,7 @@ struct LoginView: View {
                 Spacer()
                 TextField("What is your name?", text: $userName)
                     .textFieldStyle(OvalTextFieldStyle())
+                    .foregroundColor(Color.black)
                     .padding(.leading)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .disableAutocorrection(true)

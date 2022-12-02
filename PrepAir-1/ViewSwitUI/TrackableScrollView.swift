@@ -19,7 +19,7 @@ struct TrackableScrollView<Content:View>: View {
     }
     
     var body: some View {
-        SwiftUI.ScrollView(axes) {
+        SwiftUI.ScrollView(axes, showsIndicators: false) {
             GeometryReader { geometry in
                 Color.clear.preference(key: ScrollOffsetPreferenceKey.self, value: geometry.frame(in: .named("scrollView")).origin)
             }

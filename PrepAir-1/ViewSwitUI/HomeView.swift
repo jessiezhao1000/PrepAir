@@ -79,6 +79,7 @@ struct HomeView: View {
                                     self.showDatePicker = editting
                                 })
                                 .textFieldStyle(OvalTextFieldStyle1())
+                                .foregroundColor(Color.black)
                                 .padding(.leading)
                                 .onTapGesture {
                                     print("work?") // how to detect if a user has tap onto the text field?
@@ -172,7 +173,6 @@ struct OvalTextFieldStyle1: TextFieldStyle {
         configuration
             .padding(10)
             .background(.white)
-            .foregroundColor(Color.black)
             .cornerRadius(20)
             .frame(width: 247, height: 40)
     }
