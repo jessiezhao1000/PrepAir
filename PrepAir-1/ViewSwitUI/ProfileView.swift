@@ -22,17 +22,24 @@ struct ProfileView: View {
                             .onTapGesture{
                                 showParking.toggle()
                             }
-                        Spacer()
-                       
-
+                      Spacer()
+                        Image("Shopping")
+                            .padding(10)
+                            .padding([.leading, .top])
+                      Spacer()
+                        Image("Trips")
+                            .padding(10)
+                            .padding([.leading, .top])
+                      Spacer()
                     }
-                    Text("Parking")
-                        .font(.body)
-                        .fontWeight(.regular)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .padding([.leading, .top])
-                    Spacer()
-            }
+                   
+                   
+                        
+                  
+                    HStack{
+                        Image("ProfileDetails")
+                    }
+            }.offset(y:-80)
             
         }.ignoresSafeArea(.all)
             .overlay(RootHomeView())

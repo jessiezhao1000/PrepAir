@@ -10,6 +10,8 @@ import SwiftUI
 struct RootMapView: View {
     @State private var showMap = false
     @State private var showHome = false
+    @State private var showProfile = false
+
     
     //@State private var showFlightIcon = true
     //@State private var showMapIcon = false
@@ -34,7 +36,9 @@ struct RootMapView: View {
                                 //showFlightIcon.toggle()
                                 //showMapIcon.toggle()
                             }
-                            Image("Vector-1")
+                        Image("Vector-1").onTapGesture{
+                            showProfile.toggle()
+                        }
                        
                     }.offset(y : -7)
                 }
@@ -46,6 +50,9 @@ struct RootMapView: View {
         }
         if showHome{
             HomeView()
+        }
+        if showProfile{
+            ProfileView()
         }
     }
 }

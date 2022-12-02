@@ -19,7 +19,7 @@ struct ProfileHeaderView: View {
             VStack {
                 Image("Vector-1").resizable().scaledToFit()
                     .padding([.leading, .top])
-                    .frame(width: 100,height: 100, alignment: .center)
+                    .frame(width: 100,height: 120, alignment: .center)
                    
                 
                 
@@ -29,12 +29,12 @@ struct ProfileHeaderView: View {
                         .frame(width: 247, height: 40)
                         .padding([.leading])
                      */
-                    Text("Yiqian Zhao")
-                        .font(.system(size: 40))
-                        .fontWeight(.bold)
-                        .foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
-                        .frame(maxWidth: .infinity, alignment: .center)
-                        .padding([.bottom])
+//                    Text("Yiqian Zhao")
+//                        .font(.system(size: 40))
+//                        .fontWeight(.bold)
+//                        .foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
+//                        .frame(maxWidth: .infinity, alignment: .center)
+//                        .padding([.bottom])
                         
                         
                     //Rectangle 4
