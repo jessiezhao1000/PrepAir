@@ -16,6 +16,8 @@ struct FocusModeView: View {
     @State private var contentOffset = CGFloat(0)
     @State var homeViewShow = false
     
+    //@State var userName: String = ""
+    
     var body: some View {
         ZStack {
             //Rectangle 1
@@ -27,6 +29,7 @@ struct FocusModeView: View {
             TrackableScrollView(offsetChanged: { offset in
                 contentOffset = offset.y
                 print("contentOffset", contentOffset)
+                print(LoginView().$userName)
                 if contentOffset < -100 {
                     withAnimation {
                         homeViewShow = true
@@ -81,7 +84,8 @@ struct FocusModeView: View {
                 }
             }
             if homeViewShow {
-                HomeView()
+                
+                HomeView(userName: LoginView().$userName)
                     //.offset(y:75)
             }
         }.ignoresSafeArea()

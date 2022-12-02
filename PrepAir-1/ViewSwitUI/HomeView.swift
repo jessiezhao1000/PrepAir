@@ -14,16 +14,16 @@ struct HomeView: View {
     @State private var contentOffset = CGFloat(0)
     @State var focusModeShow = false
     
-<<<<<<< Updated upstream
     @State var text = ""
     @State var isBegin = false
     @State private var calander = Date()
     @State var showDatePicker = false
-=======
-    @State var userName: String = ""
->>>>>>> Stashed changes
+    
+    @Binding var userName: String
+    
     
     var body: some View {
+        //let UNCHANGENAME = userName
         ZStack {
             Color.white.ignoresSafeArea(.all)
             TrackableScrollView(offsetChanged: { offsetHome in
@@ -40,7 +40,6 @@ struct HomeView: View {
                 VStack(spacing: 0) {
                     //Image("Head")
                     //FocusModeView()
-<<<<<<< Updated upstream
 
                     //header
                     ZStack {
@@ -60,7 +59,7 @@ struct HomeView: View {
                                 .padding(.top, 225)
                                 
                             
-                            Text("Yiqian")
+                            Text(self.userName)
                                 .font(.system(size: 40))
                                 .fontWeight(.regular)
                                 .foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
@@ -79,7 +78,7 @@ struct HomeView: View {
                                 TextField("Select your flight", text: $text, onEditingChanged: { (editting) in
                                     self.showDatePicker = editting
                                 })
-                                .textFieldStyle(OvalTextFieldStyle())
+                                .textFieldStyle(OvalTextFieldStyle1())
                                 .padding(.leading)
                                 .onTapGesture {
                                     print("work?") // how to detect if a user has tap onto the text field?
@@ -93,28 +92,26 @@ struct HomeView: View {
                                     .frame(width: 79, height: 40)
                                     .padding(.trailing)
                                 
-                                                    }
-                                
+                                }
                             }
                           
                     }.offset(y:-75).frame(height:260)
                         
                     if self.showDatePicker {
                         ContendCalanderView()
-=======
-                    
+                    /*
                     HeaderView(userName: $userName)
                         .offset(y:-75)
                         .frame(height:260)
->>>>>>> Stashed changes
-                        
+                        */
 
                 }
                     Text("Your Plans")
                         .font(.title)
                         .fontWeight(.bold)
                         .frame(maxWidth: .infinity, alignment: .leading)
-                        .padding([.leading, .top])
+                        .padding([.leading])
+                        .padding(.top, 30)
                     
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack{
@@ -132,8 +129,6 @@ struct HomeView: View {
                                 .padding()
                             FlightPlanItem3()
                                 .padding()
-                               
-                            
                         }
                     }
                     
@@ -164,12 +159,13 @@ struct HomeView: View {
             if focusModeShow {
                 FocusModeView()
             }
-        }.frame(width: 400, height: 800)
+        }
+        .frame(width: 400, height: 800)
         
     }
 }
 
-struct OvalTextFieldStyle: TextFieldStyle {
+struct OvalTextFieldStyle1: TextFieldStyle {
     func _body(configuration: TextField<Self._Label>) -> some View {
         configuration
             .padding(10)
@@ -180,7 +176,8 @@ struct OvalTextFieldStyle: TextFieldStyle {
 }
 
 struct HomeView_Previews: PreviewProvider {
+    @State static var userName: String = ""
     static var previews: some View {
-        HomeView()
+        HomeView(userName: $userName)
     }
 }

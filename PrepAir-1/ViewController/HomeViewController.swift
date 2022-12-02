@@ -13,7 +13,7 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let childView = UIHostingController(rootView: HomeView())
+        let childView = UIHostingController(rootView: LoginView())
         addChild(childView)
         childView.view.frame = theContainer.bounds
         theContainer.addSubview(childView.view)

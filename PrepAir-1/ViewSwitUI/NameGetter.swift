@@ -4,7 +4,7 @@
 //
 //  Created by Yiwen Zhao on 12/1/22.
 //
-
+/*
 import SwiftUI
 
 struct NameGetter: View {
@@ -45,3 +45,4 @@ struct NameGetter_Previews: PreviewProvider {
     }
 }
 
+*/

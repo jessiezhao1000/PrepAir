@@ -7,6 +7,13 @@
 
 import SwiftUI
 
+/*
+struct UserName {
+    @Binding static var userName: String
+    //static var globalName = userName
+}
+*/
+
 struct LoginView: View {
     @State var userName: String = ""
     @State var finished = false
@@ -66,13 +73,14 @@ struct LoginView: View {
                 Spacer()
             }.padding(.all, 100)
             if finished {
-                HeaderView(userName: $userName)
-                HomeView()
+                //HeaderView(userName: $userName)
+                HomeView(userName: $userName)
             }
         }
         
     }
 }
+
 struct OvalTextFieldStyle: TextFieldStyle {
     func _body(configuration: TextField<Self._Label>) -> some View {
         configuration
@@ -87,8 +95,10 @@ struct OvalTextFieldStyle: TextFieldStyle {
 
 
 struct LoginView_Previews: PreviewProvider {
+    @State static var userName: String = ""
     static var previews: some View {
         LoginView()
+        //userName(userName: $userName)
     }
 }
 

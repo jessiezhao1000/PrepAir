@@ -119,7 +119,7 @@ struct PlanView: View {
                     }
             }
             if back {
-                HomeView()
+                HomeView(userName: .constant(""))
             }
         }
        

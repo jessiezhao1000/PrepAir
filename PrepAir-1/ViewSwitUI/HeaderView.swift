@@ -4,7 +4,7 @@
 //
 //  Created by Yiwen Zhao on 11/7/22.
 //
-
+/*
 import SwiftUI
 
 struct HeaderView: View {
@@ -14,13 +14,13 @@ struct HeaderView: View {
     @State var showDatePicker = false
     
     @Binding var userName: String
-
+    
     
     var body: some View {
         ZStack {
             Rectangle()
                 .fill(Color(#colorLiteral(red: 0.3137255012989044, green: 0.3921568691730499, blue: 0.6980392336845398, alpha: 1)))
-                //.frame(width: 400, height: 260)
+            //.frame(width: 400, height: 260)
                 .frame(width: 400, height: 400)
             
             VStack {
@@ -67,18 +67,19 @@ struct HeaderView: View {
                         .frame(width: 79, height: 40)
                         .padding(.trailing)
                     
-                                        }
-                    
                 }
-                HStack{
-                    if self.showDatePicker {
-                        ContendCalanderView()
-
+                
+            }
+            HStack{
+                if self.showDatePicker {
+                    ContendCalanderView()
+                    
                 }
             }//.offset(y:125)
         }
     }
-    
+}
+    /*
 struct OvalTextFieldStyle: TextFieldStyle {
         func _body(configuration: TextField<Self._Label>) -> some View {
             configuration
@@ -91,10 +92,11 @@ struct OvalTextFieldStyle: TextFieldStyle {
         }
     }
 }
-
+*/
 struct HeaderView_Previews: PreviewProvider {
     @State static var userName: String = ""
     static var previews: some View {
         HeaderView(userName: $userName)
     }
 }
+*/

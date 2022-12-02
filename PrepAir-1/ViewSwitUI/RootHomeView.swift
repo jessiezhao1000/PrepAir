@@ -48,7 +48,7 @@ struct RootHomeView: View {
             MapView()
         }
         if showHome{
-            HomeView()
+            HomeView(userName: .constant(""))
         }
         if showProfile{
             ProfileView()
