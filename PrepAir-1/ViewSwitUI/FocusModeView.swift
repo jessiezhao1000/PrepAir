@@ -35,8 +35,7 @@ struct FocusModeView: View {
                     withAnimation {
                         homeViewShow = true
                     }
-                }
-            }) {
+                }            }) {
                 VStack {
                     //DL 314
                     Text("DL 314")

@@ -21,17 +21,17 @@ struct TrackableScrollView<Content:View>: View {
     var body: some View {
         SwiftUI.ScrollView(axes, showsIndicators: false) {
             GeometryReader { geometry in
-                Color.clear.preference(key: ScrollOffsetPreferenceKey.self, value: geometry.frame(in: .named("scrollView")).origin)
+                Color.clear.preference(key: ScrollOffsetPreferenceKey1.self, value: geometry.frame(in: .named("scrollView")).origin)
             }
             .frame(width: 0, height: 0)
             content
         }
         .coordinateSpace(name: "scrollView")
-        .onPreferenceChange(ScrollOffsetPreferenceKey.self, perform: offsetChanged)
+        .onPreferenceChange(ScrollOffsetPreferenceKey1.self, perform: offsetChanged)
     }
 }
 
-private struct ScrollOffsetPreferenceKey : PreferenceKey {
+private struct ScrollOffsetPreferenceKey1 : PreferenceKey {
     static var defaultValue: CGPoint = .zero
     static func reduce(value: inout CGPoint, nextValue:() -> CGPoint) {}
 }

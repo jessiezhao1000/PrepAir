@@ -24,6 +24,8 @@ struct HomeView: View {
     
     @State var isPresentingScanner = false
     @State var scannedCode: String  = "Scan your QR code"
+    @State private var scrollViewContentOffset = CGFloat(0)
+
     var scannerSheet : some View {
         CodeScannerView(
             codeTypes: [.qr],
@@ -42,26 +44,29 @@ struct HomeView: View {
         //let UNCHANGENAME = userName
         ZStack {
             Color.white.ignoresSafeArea(.all)
-            TrackableScrollView(offsetChanged: { offsetHome in
-                contentOffset = offsetHome.y
-                print("contentOffset", contentOffset)
-                if contentOffset > 100 {
-                    withAnimation {
-                        focusModeShow = true
-                        //homeViewShow = false
-                    }
-                    
-                }
-            }) {
+//            TrackableScrollView(offsetChanged: { offsetHome in
+//                contentOffset = offsetHome.y
+//                print("contentOffset", contentOffset)
+//                if (contentOffset > 100 && contentOffset < 300 ) {
+//                    withAnimation {
+//                        focusModeShow = true
+//                        //homeViewShow = false
+//                    }
+//                }
+//
+//            })
+            
+            TrackableScrollView1(.vertical, contentOffset: $scrollViewContentOffset)
+            {
                 VStack(spacing: 0) {
                     //Image("Head")
                     //FocusModeView()
-
+                    
                     //header
                     ZStack {
                         Rectangle()
                             .fill(Color(#colorLiteral(red: 0.3137255012989044, green: 0.3921568691730499, blue: 0.6980392336845398, alpha: 1)))
-                            //.frame(width: 400, height: 260)
+                        //.frame(width: 400, height: 260)
                             .frame(width: 400, height: 450)
                         
                         VStack {
@@ -73,7 +78,7 @@ struct HomeView: View {
                                 .frame(maxWidth: .infinity, alignment: .leading)
                                 .padding(.leading)
                                 .padding(.top, 225)
-                                
+                            
                             
                             Text(self.userName)
                                 .font(.system(size: 40))
@@ -103,39 +108,49 @@ struct HomeView: View {
                                 
                                 
                                 Spacer()
-                                //Rectangle 4
-//                                RoundedRectangle(cornerRadius: 25)
-//                                    .fill(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
-//                                    .frame(width: 79, height: 40)
-//                                    .padding(.trailing)
-                                Button("Scan"){
-                                    self.isPresentingScanner = true
-                                    
-                                }.sheet(isPresented: $isPresentingScanner){
-                                    self.scannerSheet}
-                                    
-                                label: do {
-                                    Image(systemName: "camera.fill")
-                                        .foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
-                                        .font(.title)
+                                // Rectangle 4
+                                ZStack{
+                                    RoundedRectangle(cornerRadius: 25)
+                                        .fill(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
                                         .frame(width: 79, height: 40)
                                         .padding(.trailing)
-                                    }
-                                
+                                        .sheet(isPresented: $isPresentingScanner){
+                                            self.scannerSheet}
+                                    Text("Scan")
+                                        .offset(x:-9)
+                                        .font(.system(size: 16))
+                                    //                                    Button("Scan"){
+                                    ////                                        self.isPresentingScanner = true
+                                    //
+                                    //
+                                    //                                    }.sheet(isPresented: $isPresentingScanner){
+                                    //                                        self.scannerSheet}
+                                }.onTapGesture{
+                                    self.isPresentingScanner = true
                                 }
+                                
+                                //                                label: do {
+                                //                                    Image(systemName: "camera.fill")
+                                //                                        .foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
+                                //                                        .font(.title)
+                                //                                        .frame(width: 79, height: 40)
+                                //                                        .padding(.trailing)
+                                //                                    }
+                                
                             }
-                          
-                    }.offset(y:-75).frame(height:260)
+                        }
                         
+                    }.offset(y:-75).frame(height:260)
+                    
                     if self.showDatePicker {
                         ContendCalanderView()
-                    /*
-                    HeaderView(userName: $userName)
-                        .offset(y:-75)
-                        .frame(height:260)
-                        */
-
-                }
+                        /*
+                         HeaderView(userName: $userName)
+                         .offset(y:-75)
+                         .frame(height:260)
+                         */
+                        
+                    }
                     Text("Your Plans")
                         .font(.title)
                         .fontWeight(.bold)
@@ -176,10 +191,12 @@ struct HomeView: View {
                     
                     Spacer()
                 }
-               
             }
             .ignoresSafeArea(.all)
             .overlay(RootHomeView())
+            if (scrollViewContentOffset > 100) {
+                focusModeShow = true
+            }
             if show {
                 //withAnimation(.spring(response: 0.6, dampingFraction: 0.8)) {
                     //PlanEditView(namespace: namespace, show: $show)
@@ -190,11 +207,14 @@ struct HomeView: View {
             }
             if focusModeShow {
                 FocusModeView(userName: $userName)
+               
             }
+            
         }
         .frame(width: 400, height: 800)
         
     }
+  
 }
 
 struct OvalTextFieldStyle1: TextFieldStyle {

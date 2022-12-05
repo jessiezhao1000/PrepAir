@@ -73,6 +73,8 @@
 		FFAA5A9B2907468C00726513 /* FlightPlanItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAA5A982907468C00726513 /* FlightPlanItem.swift */; };
 		FFAA5A9C2907468C00726513 /* FlightPlanItem3.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAA5A992907468C00726513 /* FlightPlanItem3.swift */; };
 		FFD742612939A4E0005F7356 /* RootProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD742602939A4E0005F7356 /* RootProfileView.swift */; };
+		FFD7EDCA293E956100488B5E /* TrackableScrollView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD7EDC9293E956100488B5E /* TrackableScrollView1.swift */; };
+		FFD7EDCC293E95A600488B5E /* ScrollOffsetPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD7EDCB293E95A600488B5E /* ScrollOffsetPreferenceKey.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -118,6 +120,8 @@
 		FFAA5A982907468C00726513 /* FlightPlanItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightPlanItem.swift; sourceTree = "<group>"; };
 		FFAA5A992907468C00726513 /* FlightPlanItem3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightPlanItem3.swift; sourceTree = "<group>"; };
 		FFD742602939A4E0005F7356 /* RootProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootProfileView.swift; sourceTree = "<group>"; };
+		FFD7EDC9293E956100488B5E /* TrackableScrollView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackableScrollView1.swift; sourceTree = "<group>"; };
+		FFD7EDCB293E95A600488B5E /* ScrollOffsetPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollOffsetPreferenceKey.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -256,6 +260,8 @@
 				FF10C59B2926E25F00FA100A /* ProfileHeaderView.swift */,
 				FF10C59D2926E76700FA100A /* ParkingHeader.swift */,
 				6E9F70B9293846A40027F4E5 /* TrackableScrollView.swift */,
+				FFD7EDC9293E956100488B5E /* TrackableScrollView1.swift */,
+				FFD7EDCB293E95A600488B5E /* ScrollOffsetPreferenceKey.swift */,
 				6E3931BD2939518100EBAB7E /* LoginView.swift */,
 				6E3931BF2939685400EBAB7E /* NameGetter.swift */,
 			);
@@ -439,8 +445,10 @@
 				FF0033E629392E470078E29C /* CustomDatePicker.swift in Sources */,
 				FFAA5A9A2907468C00726513 /* FlightPlanItem2.swift in Sources */,
 				FF09C60F290A038F00ACDD7B /* MapView.swift in Sources */,
+				FFD7EDCC293E95A600488B5E /* ScrollOffsetPreferenceKey.swift in Sources */,
 				FF10C59C2926E25F00FA100A /* ProfileHeaderView.swift in Sources */,
 				FF88B0DB28EE6D11000133BD /* Constants.swift in Sources */,
+				FFD7EDCA293E956100488B5E /* TrackableScrollView1.swift in Sources */,
 				FF2556A128EE4723009975A9 /* HomeViewController.swift in Sources */,
 				FFAA5A9C2907468C00726513 /* FlightPlanItem3.swift in Sources */,
 				FF25568128ECDDF2009975A9 /* SceneDelegate.swift in Sources */,
