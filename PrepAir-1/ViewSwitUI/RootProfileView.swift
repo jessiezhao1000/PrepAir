@@ -11,6 +11,8 @@ struct RootProfileView: View {
     @State private var showMap = false
     @State private var showHome = false
     @State private var showProfile = false
+    @Binding var userName: String
+    
     var body: some View {
         VStack {
             Spacer()
@@ -41,19 +43,20 @@ struct RootProfileView: View {
         }.ignoresSafeArea()
     
     if showMap{
-        MapView()
+        MapView(userName: $userName)
     }
     if showHome{
-        HomeView(userName: .constant(""))
+        HomeView(userName: $userName)
     }
     if showProfile{
-        ProfileView()
+        ProfileView(userName: $userName)
     }
 }
 }
 
 struct RootProfileView_Previews: PreviewProvider {
+    @State static var userName: String = ""
     static var previews: some View {
-        RootProfileView()
+        RootProfileView(userName: $userName)
     }
 }

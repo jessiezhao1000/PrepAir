@@ -10,7 +10,7 @@ import SwiftUI
 struct MapView: View {
     @State var showHome = false
     @StateObject private var viewModel = MapViewModel()
-    
+    @Binding var userName: String
     
     var body: some View {
         ZStack {
@@ -29,8 +29,9 @@ struct MapView: View {
 //                }
 //                Spacer()
 //            }
-                
-        }.overlay(RootMapView())
+            RootMapView(userName: $userName)
+        }//.overlay(RootMapView(userName: $userName))
+        
 //        if showHome{
 //            HomeView()
 //        }
@@ -38,8 +39,9 @@ struct MapView: View {
 }
 
 struct MapView_Previews: PreviewProvider {
+    @State static var userName: String = ""
     static var previews: some View {
-        MapView()
+        MapView(userName: $userName)
     }
 }
 

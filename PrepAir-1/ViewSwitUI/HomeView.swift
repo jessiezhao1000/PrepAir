@@ -44,19 +44,18 @@ struct HomeView: View {
         //let UNCHANGENAME = userName
         ZStack {
             Color.white.ignoresSafeArea(.all)
-//            TrackableScrollView(offsetChanged: { offsetHome in
-//                contentOffset = offsetHome.y
-//                print("contentOffset", contentOffset)
-//                if (contentOffset > 100 && contentOffset < 300 ) {
-//                    withAnimation {
-//                        focusModeShow = true
-//                        //homeViewShow = false
-//                    }
-//                }
-//
-//            })
-            
-            TrackableScrollView1(.vertical, contentOffset: $scrollViewContentOffset)
+            TrackableScrollView(offsetChanged: { offsetHome in
+                contentOffset = offsetHome.y
+                print("contentOffset", contentOffset)
+                if (contentOffset > 100) {
+                    withAnimation {
+                        focusModeShow = true
+                        //homeViewShow = false
+                    }
+                }
+
+            })
+            //TrackableScrollView1(.vertical, contentOffset: $scrollViewContentOffset)
             {
                 VStack(spacing: 0) {
                     //Image("Head")
@@ -68,8 +67,14 @@ struct HomeView: View {
                             .fill(Color(#colorLiteral(red: 0.3137255012989044, green: 0.3921568691730499, blue: 0.6980392336845398, alpha: 1)))
                         //.frame(width: 400, height: 260)
                             .frame(width: 400, height: 450)
-                        
+                            .onTapGesture {
+                                if showDatePicker == true {
+                                    showDatePicker.toggle()
+                                }
+                            }
                         VStack {
+                            Text("Enter Focus Mode").offset(y:120)
+                                .foregroundColor(.white)
                             //Welcome, Yiqian
                             Text("Welcome, ")
                                 .font(.system(size: 40))
@@ -98,13 +103,11 @@ struct HomeView: View {
                                 
                                 TextField("Select your flight", text: $text, onEditingChanged: { (editting) in
                                     self.showDatePicker = editting
-                                })
+                                }, onCommit: {showDatePicker.toggle()})
                                 .textFieldStyle(OvalTextFieldStyle1())
+                                .disableAutocorrection(true)
                                 .foregroundColor(Color.black)
                                 .padding(.leading)
-                                .onTapGesture {
-                                    print("work?") // how to detect if a user has tap onto the text field?
-                                }
                                 
                                 
                                 Spacer()
@@ -193,10 +196,8 @@ struct HomeView: View {
                 }
             }
             .ignoresSafeArea(.all)
-            .overlay(RootHomeView())
-            if (scrollViewContentOffset > 100) {
-                focusModeShow = true
-            }
+            //.overlay(RootHomeView(userName: $userName))
+            RootHomeView(userName: $userName)
             if show {
                 //withAnimation(.spring(response: 0.6, dampingFraction: 0.8)) {
                     //PlanEditView(namespace: namespace, show: $show)
@@ -213,6 +214,7 @@ struct HomeView: View {
         }
         .frame(width: 400, height: 800)
         
+      
     }
   
 }

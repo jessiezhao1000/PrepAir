@@ -56,7 +56,7 @@ struct ParkingMainView: View {
             .sheet(isPresented: $showImagePicker, content: {ImagePicker(image: self.$selectedImage)  })
            
         }.ignoresSafeArea(.all)
-            .overlay(RootHomeView())
+            //.overlay(RootHomeView())
 
     }
 }
