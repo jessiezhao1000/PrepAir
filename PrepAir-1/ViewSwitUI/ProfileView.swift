@@ -62,7 +62,6 @@ struct ProfileView: View {
             if #available(iOS 16.0, *) {
                 ParkingMainView()
             } else {
-                // Fallback on earlier versions
             }
         }
     }

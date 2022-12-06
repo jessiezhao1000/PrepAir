@@ -32,5 +32,5 @@ var tasks: [TaskMetaData] = [
         Task(title: "ni sha bi"),
         Task(title: "ni shi sha bi"),
         Task(title: "ni shi da sha bi")
-    ], taskDate: getSampleDate(offset: 1))
+    ], taskDate: getSampleDate(offset: 99))
 ]

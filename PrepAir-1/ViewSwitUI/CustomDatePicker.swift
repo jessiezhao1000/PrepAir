@@ -76,7 +76,8 @@ struct CustomDatePicker: View {
                         CardView(value: value)
                             .background(
                                 Capsule()
-                                    .fill(Color("White"))
+                                    
+                                    .fill(.white)
                                     .padding(.horizontal,8)
                                     .opacity(isSameDay(date1: value.date, date2: currentDate) ? 1 : 0)
                                 
@@ -106,21 +107,23 @@ struct CustomDatePicker: View {
                 }){
                     Text("\(value.day)")
                         .font(.title3.bold())
-                        .foregroundColor(isSameDay(date1: task.taskDate, date2: currentDate) ? .white : .primary)
+                        .foregroundColor(isSameDay(date1: task.taskDate, date2: currentDate) ? .black : .white)
                         .frame(maxWidth: .infinity)
+                        
                     
                     Spacer()
                     
-                    Circle()
-                        .fill(isSameDay(date1: task.taskDate, date2: currentDate) ? .white : Color("Pink"))
-                        .frame(width: 8, height: 8)
+//                    Circle()
+//                        .fill(isSameDay(date1: task.taskDate, date2: currentDate) ? .white : .black)
+//                        .frame(width: 8, height: 8)
                 }
                 else{
                     
                     Text("\(value.day)")
                         .font(.title3.bold())
-                        .foregroundColor(isSameDay(date1: value.date, date2: currentDate) ? .white : .primary)
+                        .foregroundColor(isSameDay(date1: value.date, date2: currentDate) ? .black : .white)
                         .frame(maxWidth: .infinity)
+                        .foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
                         
                     
                     Spacer()
