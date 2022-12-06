@@ -4,10 +4,10 @@
 //
 //  Created by Jessie Zhao on 10/5/22.
 //
-
+/*
 import UIKit
 import FirebaseAuth
-import Firebase
+//import Firebase
 
 class SignUpViewController: UIViewController {
 
@@ -112,3 +112,4 @@ class SignUpViewController: UIViewController {
     }
     
 }
+*/
