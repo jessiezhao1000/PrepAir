@@ -147,6 +147,7 @@ struct HomeView: View {
                     
                     if self.showDatePicker {
                         ContendCalanderView()
+                            .padding(.top)
                         /*
                          HeaderView(userName: $userName)
                          .offset(y:-75)
