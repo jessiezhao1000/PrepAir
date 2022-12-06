@@ -74,6 +74,16 @@ struct CustomDatePicker: View {
                     ForEach(extractDate()){value in
                       
                         CardView(value: value)
+                            .background(
+                                Capsule()
+                                    .fill(Color("White"))
+                                    .padding(.horizontal,8)
+                                    .opacity(isSameDay(date1: value.date, date2: currentDate) ? 1 : 0)
+                                
+                            )
+                            .onTapGesture{
+                                currentDate = value.date
+                            }
                     }
                 }
             }
@@ -90,13 +100,43 @@ struct CustomDatePicker: View {
         VStack{
             
             if value.day != -1{
-                Text("\(value.day)")
-                    .font(.title3.bold())
-                    .foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
+                if let task = tasks.first(where : {task in
+                    
+                    return isSameDay(date1: task.taskDate, date2: value.date)
+                }){
+                    Text("\(value.day)")
+                        .font(.title3.bold())
+                        .foregroundColor(isSameDay(date1: task.taskDate, date2: currentDate) ? .white : .primary)
+                        .frame(maxWidth: .infinity)
+                    
+                    Spacer()
+                    
+                    Circle()
+                        .fill(isSameDay(date1: task.taskDate, date2: currentDate) ? .white : Color("Pink"))
+                        .frame(width: 8, height: 8)
+                }
+                else{
+                    
+                    Text("\(value.day)")
+                        .font(.title3.bold())
+                        .foregroundColor(isSameDay(date1: value.date, date2: currentDate) ? .white : .primary)
+                        .frame(maxWidth: .infinity)
+                        
+                    
+                    Spacer()
+
+                }
             }
         }
-        .padding(.vertical,8)
+        .padding(.vertical,9)
         .frame(height: 60, alignment: .top)
+    }
+    
+    //checking the same day
+    func isSameDay(date1: Date, date2: Date) -> Bool{
+        let calendar = Calendar.current
+        
+        return calendar.isDate(date1, inSameDayAs: date2)
     }
     
     //extracting year and month for display

@@ -17,6 +17,7 @@
 		FF0033E42939246F0078E29C /* CalanderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0033E32939246F0078E29C /* CalanderView.swift */; };
 		FF0033E629392E470078E29C /* CustomDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0033E529392E470078E29C /* CustomDatePicker.swift */; };
 		FF0033E829392FB20078E29C /* ContendCalanderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0033E729392FB20078E29C /* ContendCalanderView.swift */; };
+		FF0201BB293F279600CB1896 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0201BA293F279600CB1896 /* Task.swift */; };
 		FF09C60F290A038F00ACDD7B /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF09C60E290A038F00ACDD7B /* MapView.swift */; };
 		FF10C5962926D99400FA100A /* ParkingMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF10C5952926D99400FA100A /* ParkingMainView.swift */; };
 		FF10C5982926DC2B00FA100A /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF10C5972926DC2B00FA100A /* ProfileView.swift */; };
@@ -63,6 +64,7 @@
 		FF0033E32939246F0078E29C /* CalanderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalanderView.swift; sourceTree = "<group>"; };
 		FF0033E529392E470078E29C /* CustomDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDatePicker.swift; sourceTree = "<group>"; };
 		FF0033E729392FB20078E29C /* ContendCalanderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContendCalanderView.swift; sourceTree = "<group>"; };
+		FF0201BA293F279600CB1896 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		FF09C60E290A038F00ACDD7B /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		FF10C5952926D99400FA100A /* ParkingMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingMainView.swift; sourceTree = "<group>"; };
 		FF10C5972926DC2B00FA100A /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 				FF0033E729392FB20078E29C /* ContendCalanderView.swift */,
 				FF0033E32939246F0078E29C /* CalanderView.swift */,
 				FF0033E529392E470078E29C /* CustomDatePicker.swift */,
+				FF0201BA293F279600CB1896 /* Task.swift */,
 				FFAA5A8D290745C400726513 /* RootHomeView.swift */,
 				FFD742602939A4E0005F7356 /* RootProfileView.swift */,
 				6E5BF14F291A0AAA004F53B2 /* RootMapView.swift */,
@@ -363,6 +366,7 @@
 				FF25569F28EE4717009975A9 /* LoginViewController.swift in Sources */,
 				FF0033E629392E470078E29C /* CustomDatePicker.swift in Sources */,
 				FFAA5A9A2907468C00726513 /* FlightPlanItem2.swift in Sources */,
+				FF0201BB293F279600CB1896 /* Task.swift in Sources */,
 				FF09C60F290A038F00ACDD7B /* MapView.swift in Sources */,
 				FFD7EDCC293E95A600488B5E /* ScrollOffsetPreferenceKey.swift in Sources */,
 				FF10C59C2926E25F00FA100A /* ProfileHeaderView.swift in Sources */,

@@ -49,13 +49,7 @@ struct HomeView: View {
                 print("contentOffset", contentOffset)
                 if (contentOffset > 100) {
                     withAnimation {
-                        focusModeShow = true
-                        //homeViewShow = false
-                    }
-                }
-
-            })
-            //TrackableScrollView1(.vertical, contentOffset: $scrollViewContentOffset)
+                        focusModeShow = true}}})
             {
                 VStack(spacing: 0) {
                     //Image("Head")
